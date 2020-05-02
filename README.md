@@ -1,6 +1,5 @@
 # Name
 PareCommit
-====
 
 # Overview
 気軽に共存
@@ -8,7 +7,6 @@ PareCommit
 ## Description
 趣味や勉強、達成したい目標で同志とマッチング
 目標設定やペナルティを経て、目標を達成を補助
-====
 
 # DB設計
 

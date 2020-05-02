@@ -7,9 +7,9 @@ PareCommit
 - 趣味や勉強、達成したい目標で同志とマッチング
 - 目標設定やペナルティを経て、目標を達成を補助
 
-# DB設計
+## DB設計
 
-## usersテーブル
+### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique: true|
@@ -20,11 +20,11 @@ PareCommit
 |profile|text||
 |icon|text||
 
-### Association
+#### Association
 - has_many :targets
 - has_many :matchings
 
-## targetsテーブル
+### targetsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique: true|
@@ -34,15 +34,15 @@ PareCommit
 |Limited_time|string|null: false|
 |status|string|null: false|
 
-### Association
+#### Association
 - belongs_to :user
 
-## matchingsテーブル
+### matchingsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 |comment|string|null: false|
 
-### Association
+#### Association
 - belongs_to :user

@@ -26,6 +26,10 @@
     .header {
       height: 250px;
       border-bottom: solid 1px white;
+      a {
+        text-decoration: none;
+        color: white;
+      }
       .char {
         &-box {
           padding-top: 20px;
@@ -41,7 +45,7 @@
             }
           }
           &_name {
-            padding-top: 20px;
+            padding-top: 10px;
           }
         }
       }
@@ -99,6 +103,7 @@
               width: 100px;
               height: 100px;
               background-color: gray;
+              color: white;
             }
           }
           .profile {
@@ -109,13 +114,16 @@
   
             }
             &-detele {
+              padding-top: 10px;
               display: flex;
               &_limit {}
               &_gender {
                 padding-left: 20px;
               }
             }
-            &-message {}
+            &-message {
+              padding-top: 10px;
+            }
           }
           .match {
             padding-left: 50px;

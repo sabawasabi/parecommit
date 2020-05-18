@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'matchs/index'
   devise_for :users
   root "matchs#index"
+  resources :targets, only: [:new, :create]
 end

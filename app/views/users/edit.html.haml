@@ -1,0 +1,30 @@
+= render "title_bar"
+.user
+  .header
+    %h2 edit
+  .main
+    .main-box
+      = form_for(current_user) do |f|
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+          %br/
+          = f.label "ニックネーム"
+          %br/
+          = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+          %br/
+          = f.label "性別"
+          %br/
+          = f.text_field :gender, autofocus: true, autocomplete: "gender"
+          %br/
+          = f.label "ひとこと"
+          %br/
+          = f.text_field :profile, autofocus: true, autocomplete: "profile"
+          %br/
+          = f.label "アイコン"
+          %br/
+          = f.text_field :icon, autofocus: true, autocomplete: "icon"
+
+        .actions
+          = f.submit "Edit"

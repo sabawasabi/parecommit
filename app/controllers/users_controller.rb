@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def upadate
-    if current_user.upadate(user_params)
+  def update
+    if current_user.update(user_params)
       redirect_to root_path
     else
       render :edit

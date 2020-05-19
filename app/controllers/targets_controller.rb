@@ -1,4 +1,5 @@
 class TargetsController < ApplicationController
+  before_action :set_target, only: [:show, :edit, :update]
 
   def new
     @target = Target.new
@@ -14,8 +15,21 @@ class TargetsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
   private
   def target_params
     params.require(:target).permit(:target, :explanation, :limit).merge(user_id: current_user.id)
+  end
+
+  def set_target
+    @target = Target.find(params[:id])
   end
 end

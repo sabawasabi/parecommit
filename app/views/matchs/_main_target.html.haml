@@ -3,6 +3,11 @@
     .target-new
       =link_to new_target_path, class: "target-new__title" do
         目標設定
+
     .target-list
-      =link_to "edit_target_path", class: "target-edit__title" do
-        目標編集
+      .target-list__title
+        目標リスト
+      - @targets.each do |target|
+        .target-list__name
+          = link_to "#" do
+            = target.target

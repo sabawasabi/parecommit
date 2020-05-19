@@ -77,7 +77,7 @@
     height: calc(100vh - 100px);
     width: calc(100vw - 300px);
     .target {
-      &-name {
+      .search-name {
         font-size: 25px;
         background-color: gray;
         color: white;

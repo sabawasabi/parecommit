@@ -2,7 +2,7 @@ class TargetsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update]
 
   def index
-    @targets = Target.order("created_at ASC")
+    @targets = Target.where(user_id: current_user.id)
   end
 
   def new

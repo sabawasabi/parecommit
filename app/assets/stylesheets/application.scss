@@ -1,8 +1,9 @@
 @import "reset";
 @import "config/colors";
+@import "modules/share";
 @import "modules/flash";
-@import "modules/match/matchs";
-@import "modules/user/users";
-@import "modules/target/targets";
+@import "modules/matchs";
+@import "modules/users";
+@import "modules/targets";
 @import "font-awesome-sprockets";
 @import "font-awesome";

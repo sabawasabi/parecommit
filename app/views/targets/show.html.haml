@@ -1,6 +1,6 @@
-= render "title_bar"
+= render "share/title_bar"
 .wrapper
-  = render "side_bar"
+  = render "share/side_bar"
   .main
     .target-name
       .target-name__box
@@ -21,6 +21,6 @@
       .target-limit__text
         = @target.limit
     .target-button
-      = link_to "Pare", new_match_path, class: "target-button__Pare"
+      = link_to "Pare", search_targets_path, class: "target-button__Pare"
       = link_to "編集画面に進む", "#", class: "target-button__edit"
       = link_to "もどる", '/' , class: 'target-button__back'

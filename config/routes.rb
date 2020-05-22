@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "matchs#index"
-  resources :users, only: [:edit, :update]
+  root "targets#index"
   resources :targets, only: [:new, :create, :show]
+  resources :matchs, only: [:index, :new, :create]
+  resources :users, only: [:edit, :update]
 end

@@ -1,6 +1,10 @@
 class TargetsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update]
 
+  def index
+    @targets = Target.order("created_at ASC")
+  end
+
   def new
     @target = Target.new
   end

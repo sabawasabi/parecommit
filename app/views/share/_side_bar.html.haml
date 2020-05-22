@@ -14,12 +14,6 @@
                 = icon('fas', 'cog', class: 'icon')
           .char-box_name-2
             = link_to "ログアウト", destroy_user_session_path, method: :delete
-        -else
-          .char-box_name-1
-            = link_to "ログイン", "#"
-          .char-box_name-2
-            = link_to "新規会員登録", "#"
-        -# elseはアクセス時にログイン判定しているため、現在未使用
   .main
     .match-list
       .match-box

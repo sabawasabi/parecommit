@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   # Validations
   validates :nickname, presence: true, uniqueness: true
+  validates :email,    presence: true, uniqueness: true
+  validates :gender,   presence: true
 
   # Associations
   has_many  :targets

@@ -31,7 +31,7 @@ PareCommit
 |user_id|references|null: false, foreign_key: true|
 |target|string|null: false|
 |explanation|text|null: false|
-|Limited_time|string|null: false|
+|Limit|string|null: false|
 |status|string|null: false|
 
 #### Association
@@ -40,7 +40,7 @@ PareCommit
 ### matchingsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
+|target_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 |comment|string|null: false|
 

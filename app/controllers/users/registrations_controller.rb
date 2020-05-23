@@ -1,9 +1,9 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  GET /resource/sign_up
+  # GET /resource/sign_up
   def new
   end
 
-  POST /resource
+  # POST /resource
   def create
     super
   end

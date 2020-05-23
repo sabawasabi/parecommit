@@ -22,6 +22,10 @@ class TargetsController < ApplicationController
   def show
   end
 
+  def search
+    @targets = Target.search(params[:keyword]).where.not(user_id: current_user.id)
+  end
+
   def edit
   end
 

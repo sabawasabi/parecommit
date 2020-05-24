@@ -1,0 +1,13 @@
+= render "share/title_bar"
+.wrapper
+  = render "share/side_bar"
+  .main
+    match new
+    %br/
+    = @target.target
+    %br/
+    = @target.user.nickname
+    %br/
+    = current_user.id
+    %br/
+    = link_to "Pare", done_matchs_path(target_id: @target)

@@ -71,6 +71,7 @@
 
 #### Association
 - belongs_to :user
+- has_many   :matchings
 
 ### matchingsテーブル
 |Column|Type|Options|
@@ -81,3 +82,4 @@
 
 #### Association
 - belongs_to :user
+- belongs_to :target

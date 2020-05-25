@@ -45,41 +45,51 @@
 
 ## DB設計
 ### usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false, unique: true|
-|nickname|string|null: false|
-|mail|string|null: false, unique: true|
-|password|string|null: false|
-|gender|string|null: false|
-|profile|text||
-|icon|text||
+|Column    |Type    |Options                    |
+|----------|--------|---------------------------|
+|nickname  |string  |null: false                |
+|mail      |string  |null: false, unique: true  |
+|password  |string  |null: false                |
+|gender    |string  |null: false                |
+|profile   |text    |                           |
+|icon      |text    |                           |
 
 #### Association
 - has_many :targets
-- has_many :matchings
+- has_many :matchs
+- has_many :messages
 
 ### targetsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false, unique: true|
-|user_id|references|null: false, foreign_key: true|
-|target|string|null: false|
-|explanation|text|null: false|
-|Limit|string|null: false|
-|status|string|null: false|
+|Column       |Type        |Options                         |
+|-------------|------------|--------------------------------|
+|user_id      |references  |null: false, foreign_key: true  |
+|target       |string      |null: false                     |
+|explanation  |text        |null: false                     |
+|Limit        |string      |null: false                     |
+|status       |string      |null: false                     |
 
 #### Association
 - belongs_to :user
-- has_many   :matchings
+- has_many   :matchs
 
-### matchingsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|target_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
-|comment|string|null: false|
+### matchsテーブル
+|Column     |Type        |Options                         |
+|-----------|------------|--------------------------------|
+|target_id  |references  |null: false, foreign_key: true  |
+|user_id    |references  |null: false, foreign_key: true  |
 
 #### Association
 - belongs_to :user
 - belongs_to :target
+- has_many   :messages
+
+### messagesテーブル
+|Column     |Type        |Options                         |
+|----------|------------|--------------------------------|
+|match_id  |references  |null: false, foreign_key: true  |
+|user_id   |references  |null: false, foreign_key: true  |
+|comment   |string      |null: false                     |
+
+#### Association
+- belongs_to :user
+- belongs_to :match

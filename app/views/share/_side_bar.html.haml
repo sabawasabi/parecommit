@@ -23,3 +23,13 @@
           .match-box_name
             = link_to messages_path(match_id: match) do
               = match.target.user.nickname
+    - current_user.targets.each do |target|
+      - target.matchs.each do |match|
+        .match-list
+          .match-box
+            .match-box_icon
+              .match-box_icon-image
+                = target.user.icon
+            .match-box_name
+              = link_to messages_path(match_id: match) do
+                = target.target

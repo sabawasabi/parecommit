@@ -1,8 +1,7 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
-
+= render partial: 'message', collection: @messages
+      
 message new
-= form_with(model:[@message], local: true) do |form|
+= form_with(model:@message, local: true) do |form|
   = form.text_field  :message
-  = hidden_field_tag :match_id, @match
+  = hidden_field_tag :match_id, params[:match_id]
   = form.submit "Send"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_144317) do
+ActiveRecord::Schema.define(version: 2020_05_25_123236) do
 
   create_table "matches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "target_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 2020_05_20_144317) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["target_id"], name: "index_matches_on_target_id"
     t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "message"
+    t.bigint "match_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["match_id"], name: "index_messages_on_match_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -50,5 +60,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_144317) do
 
   add_foreign_key "matches", "targets"
   add_foreign_key "matches", "users"
+  add_foreign_key "messages", "matches"
+  add_foreign_key "messages", "users"
   add_foreign_key "targets", "users"
 end

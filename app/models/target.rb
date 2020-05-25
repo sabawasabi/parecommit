@@ -7,7 +7,8 @@ class Target < ApplicationRecord
 
   # Associations
   belongs_to :user
-  has_many :matchs
+  has_many   :matchs
+  has_many   :messages
 
   def self.search(search)
     return Target.all unless search

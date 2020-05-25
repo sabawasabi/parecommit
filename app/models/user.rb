@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :gender,   presence: true
 
   # Associations
-  has_many  :targets
+  has_many :targets
   has_many :matchs
+  has_many :messages
 end

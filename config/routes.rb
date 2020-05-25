@@ -12,5 +12,6 @@ Rails.application.routes.draw do
       get 'match_target', to: 'matchs#match_target'
       get 'done',         to: 'matchs#done'
     end
+    resources :messages, only: [:index, :create]
   end
 end

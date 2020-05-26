@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe600;
+  .user {
+    padding-top: 50px;
+    .header {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      
+      &-title {
+        font-size: 30px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+    .main {
+      .main-box {
+        margin: 10px;
+        .field {
+          .main-box_form {
+            padding-top: 5px;
+            .main-box_form-title {
+              margin: 10px;
+            }
+            .main-box_form-input {
+              margin: 10px;
+              input {
+                width: 100%;
+                padding: 5px 10px;
+                font-size: 16px;
+                border-radius: 3px;
+                border: 2px solid black;
+                box-sizing: border-box; 
+              }
+            }
+          }
+        }
+        .actions {
+          margin: 50px;
+          display: flex;
+          justify-content: center;
+          &-buttom {
+            input {
+              background-color: black;
+              color: white;
+              height: 50px;
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      &-link {
+        height: 100px;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}

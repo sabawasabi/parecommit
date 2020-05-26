@@ -1,30 +1,38 @@
 = render "share/title_bar"
-.user
-  .header
-    %h2 edit
-  .main
-    .main-box
-      = form_for(current_user) do |f|
-        .field
-          = f.label :email
-          %br/
-          = f.email_field :email, autofocus: true, autocomplete: "email"
-          %br/
-          = f.label "ニックネーム"
-          %br/
-          = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-          %br/
-          = f.label "性別"
-          %br/
-          = f.text_field :gender, autofocus: true, autocomplete: "gender"
-          %br/
-          = f.label "ひとこと"
-          %br/
-          = f.text_field :profile, autofocus: true, autocomplete: "profile"
-          %br/
-          = f.label "アイコン"
-          %br/
-          = f.text_field :icon, autofocus: true, autocomplete: "icon"
-
-        .actions
-          = f.submit "Edit"
+.wrapper
+  .user
+    .header
+      .header-title
+        Edit
+    .main
+      .main-box
+        = form_for(current_user) do |f|
+          .field
+            .main-box_form
+              .main-box_form-title
+                mail :
+              .main-box_form-input
+                = f.email_field :email, autofocus: true, autocomplete: "email"
+            .main-box_form
+              .main-box_form-title
+                nickname :
+              .main-box_form-input
+                = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+            .main-box_form
+              .main-box_form-title
+                gender :
+              .main-box_form-input
+                = f.text_field :gender, autofocus: true, autocomplete: "gender"
+            .main-box_form
+              .main-box_form-title
+                profile :
+              .main-box_form-input
+                = f.text_field :profile, autofocus: true, autocomplete: "profile"
+            .main-box_form
+              .main-box_form-title
+                icon :
+              .main-box_form-input
+                = f.text_field :icon, autofocus: true, autocomplete: "icon"
+          .actions
+            .actions-buttom
+              = f.submit "Edit"

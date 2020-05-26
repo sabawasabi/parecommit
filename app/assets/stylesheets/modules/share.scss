@@ -1,3 +1,12 @@
-* {
-  box-sizing: border-box;
+.bar {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  line-height: 50px;
+  justify-content: center;
+  .bar-title {
+    color: white;
+    font-size: 30px;
+  }
 }

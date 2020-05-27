@@ -6,6 +6,7 @@
   line-height: 50px;
   justify-content: center;
   position: fixed;
+  border-bottom: solid white 1px;
   .bar-title {
     color: white;
     font-size: 30px;
@@ -15,7 +16,6 @@
 .side-bar {
   width: 200px;
   background-color: black;
-  border-top: solid white 1px;
   color: white;
   .header {
     height: 200px;
@@ -47,12 +47,11 @@
         }
         &_logout {
           padding-top: 10px;
-          font-weight: 600;
         }
       }
     }
   }
-  .main {
+  .side-main {
     background-color: black;
     height: calc(100vh - 250px);
     width: 200px;

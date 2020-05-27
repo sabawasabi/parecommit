@@ -1,12 +1,12 @@
-.index-main {
+.main {
   width: calc(100vw - 200px);
+
   .target {
     width: 100%;
     padding: 20px;
     &-new {
       border-bottom: solid 1px black;
       padding-bottom: 20px;
-      font-weight: 600;
       a {
         color: #ff6600;
       }
@@ -20,7 +20,6 @@
         background-color: black;
         padding: 0 24px;
         border: 1px solid #ff6600;
-        font-weight: 600;
         overflow: hidden;
         text-align: center;
       }
@@ -28,39 +27,175 @@
     .search-form {
       border-bottom: solid 1px black;
       padding-bottom: 20px;
-      font-weight: 600;
       margin-top: 20px;
       &__input {
         margin-top: 10px;
         height: 40px;
         width: 40%;
+        border-bottom: solid 1px black;
       }
       &__button {
-        background-color: black;
         color: #ff6600;
+        background-color: black;
+        border: 1px solid #ff6600;
         width: 20%;
         padding: 0 24px;
-        border: 1px solid #ff6600;
+        margin-left: 10px;
         font-size: 20px;
-        font-weight: 600;
         line-height: 40px;
       }
     }
     &-list {
       margin-top: 20px;
-      font-weight: 600;
       &__title {
       }
       &__box {
         margin-top: 10px;
         display: flex;
         &-name {
+          height: 50px;
+          line-height: 50px;
           width: 200px;
+          background-color: black;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          border: solid 1px black;
+          a {
+            color: white;
+          }
         }
         &-explanation {
-          margin-left: 10px;
+          padding-left: 10px;
+          height: 50px;
+          line-height: 50px;
+          width: 70%;
+          background-color: white;
+          border: solid 1px black;
         }
       }
     } 
+  }
+
+  .new {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .target-box {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px black;
+      &__title {
+        display: flex;
+        align-items: center;
+        &-text {
+          font-size: 20px;
+        }
+        &-required {
+          margin-left: 8px;
+          color: white;
+          background-color: #ff6600;
+          height: 16px;
+          width: 36px;
+          padding: 0 4px;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 16px;
+          text-align: center;
+        }
+      }
+      &__field {
+        margin-top: 5px;
+        input {
+          width: 600px;
+          height: 40px;
+          border: solid 1px black;
+        }
+      }
+      &__area {
+        margin-top: 5px;
+        textarea {
+          width: 600px;
+          height: 200px;
+          border: solid 1px black;
+          resize: none;
+        }
+      }
+    }
+    .target-button {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      &__decision {
+        input {
+          background-color: black;
+          color: white;
+          height: 50px;
+          width: 150px;
+        }
+      }
+      &__back {
+        margin-left: 20px;
+        background-color: #ff6600;
+        height: 50px;
+        line-height: 50px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        a {
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .search {
+    width: 100%;
+    padding: 20px;
+    &-name {
+      height: 50px;
+      font-size: 45px;
+    }
+    &-list {
+      margin-top: 20px;
+      &_box {
+        margin-top: 20px;
+        display: flex;
+        &_icon {
+          height: 100px;
+          line-height: 100px;
+          background-color: gray;
+          color: white;
+          width: 100px;
+          text-align: center;
+          &-image {}
+        }
+        .profile {
+          margin-left: 20px;
+          width: 30%;
+          &-name {}
+          &-detele {
+            &_limit {}
+            &_gender {}
+          }
+          &-message {}
+        }
+        .match {
+          padding: 20px;
+          a {
+            color: white;
+          }
+          &-button {
+            height: 60px;
+            line-height: 60px;
+            width: 100px;
+            background-color: black;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 }

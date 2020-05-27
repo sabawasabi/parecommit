@@ -13,7 +13,7 @@
               = icon('fas', 'cog', class: 'icon')
         .char-box_logout
           = link_to "ログアウト", destroy_user_session_path, method: :delete
-  .main
+  .side-main
     - current_user.matchs.each do |match|
       .match-list
         .match-box
@@ -29,7 +29,7 @@
           .match-box
             .match-box_icon
               .match-box_icon-image
-                = target.user.icon
+                = match.user.icon
             .match-box_name
               = link_to messages_path(match_id: match) do
-                = target.target
+                = match.user.nickname

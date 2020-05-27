@@ -1,14 +1,15 @@
-.wrapper {
+.wrapper-user {
   display: flex;
   justify-content: center;
   background-color: #ffe600;
+  overflow: scroll;
+  height: 100vh;
+  padding-top: 50px;
   .user {
-    padding-top: 50px;
     .header {
       padding-top: 20px;
       display: flex;
       justify-content: center;
-      
       &-title {
         font-size: 30px;
         height: 50px;

@@ -1,0 +1,66 @@
+.index-main {
+  width: calc(100vw - 200px);
+  .target {
+    width: 100%;
+    padding: 20px;
+    &-new {
+      border-bottom: solid 1px black;
+      padding-bottom: 20px;
+      font-weight: 600;
+      a {
+        color: #ff6600;
+      }
+      &__title {
+        margin-top: 10px;
+        padding-left: 20px;
+        height: 50%;
+        width: 30%;
+        line-height: 50px;
+        font-size: 20px;
+        background-color: black;
+        padding: 0 24px;
+        border: 1px solid #ff6600;
+        font-weight: 600;
+        overflow: hidden;
+        text-align: center;
+      }
+    }
+    .search-form {
+      border-bottom: solid 1px black;
+      padding-bottom: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+      &__input {
+        margin-top: 10px;
+        height: 40px;
+        width: 40%;
+      }
+      &__button {
+        background-color: black;
+        color: #ff6600;
+        width: 20%;
+        padding: 0 24px;
+        border: 1px solid #ff6600;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 40px;
+      }
+    }
+    &-list {
+      margin-top: 20px;
+      font-weight: 600;
+      &__title {
+      }
+      &__box {
+        margin-top: 10px;
+        display: flex;
+        &-name {
+          width: 200px;
+        }
+        &-explanation {
+          margin-left: 10px;
+        }
+      }
+    } 
+  }
+}

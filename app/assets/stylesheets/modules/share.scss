@@ -11,3 +11,74 @@
     font-size: 30px;
   }
 }
+
+.side-bar {
+  width: 200px;
+  background-color: black;
+  border-top: solid white 1px;
+  color: white;
+  .header {
+    height: 200px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .char {
+      &-box {
+        padding-top: 20px;
+        text-align: center;
+        &_icon {
+          display: flex;
+          justify-content: center;
+          &-image {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: gray;
+          }
+        }
+        &_name {
+          padding-top: 10px;
+          display: flex;
+          justify-content: center;
+          &_edit {
+            padding-left: 5px;
+          }
+        }
+        &_logout {
+          padding-top: 10px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .main {
+    background-color: black;
+    height: calc(100vh - 250px);
+    width: 200px;
+    border-top: solid white 1px;
+    .match-list {
+      padding: 20px;
+      .match-box {
+        display: flex;
+        text-align: center;
+        line-height: 50px;
+        background-color: #ff6600;
+        &_icon {
+          &-image {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+          }
+        }
+        &_name {
+          padding-left: 10px;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

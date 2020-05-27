@@ -47,6 +47,7 @@
         }
         &_logout {
           padding-top: 10px;
+          font-weight: 600;
         }
       }
     }
@@ -58,12 +59,11 @@
     border-top: solid white 1px;
     .match-list {
       padding: 20px;
-      border-bottom: solid white 1px;
-      
       .match-box {
         display: flex;
         text-align: center;
         line-height: 50px;
+        background-color: #ff6600;
         &_icon {
           &-image {
             width: 50px;
@@ -75,7 +75,7 @@
           padding-left: 10px;
           a {
             text-decoration: none;
-            color: white;
+            color: black;
           }
         }
       }

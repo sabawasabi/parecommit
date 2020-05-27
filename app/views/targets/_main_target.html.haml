@@ -1,16 +1,25 @@
-.main
+.index-main
+  .target-header
+    .target-header_image
+      = image_tag 'book.jpg', class: 'target-header_image_icon',size: '1240x200'
   .target
     .target-new
-      =link_to new_target_path, class: "target-new__title" do
-        目標設定
-
+      目標を設定
+      =link_to new_target_path do
+        .target-new__title
+          Target Set
+    = form_with(url: search_targets_path, local: true, method: :get, class: "search-form") do |form|
+      .search-form__title
+        目標を共有、Pareを作成
+      = form.text_field :keyword, placeholder: "目標を検索する", class: "search-form__input"
+      = form.submit "Search", class: "search-form__button"
     .target-list
       .target-list__title
         目標リスト
       - @targets.each do |target|
-        .target-list__name
-          = link_to target_path(target.id) do
-            = target.target
-    = form_with(url: search_targets_path, local: true, method: :get, class: "search-form") do |form|
-      = form.text_field :keyword, placeholder: "目標を検索する", class: "search-input"
-      = form.submit "検索", class: "search-btn"
+        .target-list__box
+          .target-list__box-name
+            = link_to target_path(target.id) do
+              = target.target
+          .target-list__box-explanation
+            = target.explanation

@@ -2,24 +2,28 @@
 .wrapper
   = render "share/side_bar"
   .main
-    .target-name
-      .target-name__box
-        .target-name__box-title
-          目標名
-      .target-name__text
-        = @target.target
-    .target-explanation
-      .target-explanation__box
-        .target-explanation__box-title
-          目標への意気込み
-      .target-explanation__text
-        = @target.explanation
-    .target-limit
-      .target-limit__box
-        .target-limit__box-title
-          目標日
-      .target-limit__text
-        = @target.limit
-    .target-button
-      = link_to "編集画面に進む", "#", class: "target-button__edit"
-      = link_to "もどる", '/' , class: 'target-button__back'
+    .show
+      .show-main
+        .target-box
+          .target-box__title
+            .target-box__title-text
+              目標名
+          .target-box__field
+            = @target.target
+        .target-box
+          .target-box__title
+            .target-box__title-text
+              目標への意気込み
+          .target-box__area
+            = @target.explanation
+        .target-box
+          .target-box__title
+            .target-box__title-text
+              目標日
+          .target-box__field
+            = @target.limit
+        .target-button
+          .target-button__decision
+            = link_to "編集画面に進む", "#"
+          .target-button__back
+            = link_to "もどる", '/'

@@ -2,13 +2,13 @@
 .wrapper
   = render "share/side_bar"
   .main
-    .target
+    .search
       .search-name
         = "#{params[:keyword]}"
-      .target-list
+      .search-list
         - @targets.each do |target|
-          .target-list_box
-            .target-list_box_icon
+          .search-list_box
+            .search-list_box_icon
               .target-list_box_icon-image
                 = target.user.icon
             .profile
@@ -22,5 +22,6 @@
               .profile-message
                 = target.explanation
             .match
-              .match-button
-                = link_to "Pare", match_target_matchs_path(target_id: target)
+              = link_to match_target_matchs_path(target_id: target) do
+                .match-button
+                  Pare

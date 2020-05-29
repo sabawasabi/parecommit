@@ -17,6 +17,8 @@
       }
     }
     .main {
+      display: flex;
+      justify-content: center;
       .main-box {
         margin: 10px;
         .field {

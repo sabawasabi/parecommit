@@ -62,7 +62,7 @@
           justify-content: center;
           border: solid 1px black;
           a {
-            color: white;
+            color: #ff6600;
           }
         }
         &-explanation {
@@ -157,13 +157,17 @@
     &-name {
       height: 50px;
       font-size: 45px;
+      border-bottom: solid 1px black;
     }
     &-list {
       margin-top: 20px;
       &_box {
         margin-bottom: 20px;
         display: flex;
-        
+        align-items: center;
+        background-color: black;
+        border: solid 1px black;
+        width: 60%;
         &_icon {
           height: 100px;
           line-height: 100px;
@@ -171,11 +175,14 @@
           color: white;
           width: 100px;
           text-align: center;
-          &-image {}
+          border-right: solid 1px black;
+          &-image {
+          }
         }
         .profile {
+          color: white;
           margin-left: 20px;
-          width: 30%;
+          width: 65%;
           &-name {}
           &-detele {
             &_limit {}
@@ -184,7 +191,7 @@
           &-message {}
         }
         .match {
-          padding: 20px;
+          padding: 20px 0;
           a {
             color: white;
           }
@@ -192,11 +199,75 @@
             height: 60px;
             line-height: 60px;
             width: 100px;
-            background-color: black;
+            background-color: #ff6600;
             text-align: center;
           }
         }
       }
+    }
+  }
+
+  .show {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .show-main {
+      .target-box {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px black;
+        &__title {
+  
+          &-text {
+            font-size: 20px;
+          }
+        }
+        &__field {
+          margin-top: 5px;
+          width: 600px;
+          height: 40px;
+          border: solid 1px black;
+          background-color: white;
+        }
+        &__area {
+          margin-top: 5px;
+          width: 600px;
+          height: 200px;
+          border: solid 1px black;
+          background-color: white;
+        }
+      }
+      .target-button {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        &__decision {
+          background-color: black;
+          height: 50px;
+          line-height: 50px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          a {   
+            color: white;
+            text-align: center;
+          }
+        }
+        &__back {
+          margin-left: 20px;
+          background-color: #ff6600;
+          height: 50px;
+          line-height: 50px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          a {
+            color: white;
+            text-align: center;
+          }
+        }
+      } 
     }
   }
 }

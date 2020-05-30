@@ -2,12 +2,21 @@
 .wrapper
   = render "share/side_bar"
   .main
-    match new
-    %br/
-    = @target.target
-    %br/
-    = @target.user.nickname
-    %br/
-    = current_user.id
-    %br/
-    = link_to "Pare", done_matchs_path(target_id: @target)
+    .match
+      .match-title
+        match new
+      .match-target
+        .match-target__box
+          .match-target__box-title
+            Pare対象の目標
+          .match-target__box-content
+            = @target.target
+        .match-target__box
+          .match-target__box-title
+            以下のユーザーとPareを組みますか？
+          .match-target__box-content
+            = @target.user.nickname
+      .match-decision
+        = link_to done_matchs_path(target_id: @target) do
+          .match-decision__button
+            Pare

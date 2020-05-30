@@ -1,0 +1,37 @@
+.main {
+  width: calc(100vw - 200px);
+
+  .match {
+    width: 100%;
+    padding: 20px;
+    &-title {
+      font-size: 60px;
+      margin-bottom: 20px;
+      border-bottom: solid 1px black;
+    }
+    &-target {
+      &__box {
+        margin-bottom: 20px;
+        font-size: 20px;
+        &-title {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        &-content {}
+      }
+    }
+    &-decision {
+      padding: 20px 0;
+      a {
+        color: white;
+      }
+      &__button {
+        height: 60px;
+        line-height: 60px;
+        width: 100px;
+        background-color: #ff6600;
+        text-align: center;
+      }
+    }
+  }
+}

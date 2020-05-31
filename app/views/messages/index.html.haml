@@ -1,7 +1,10 @@
-= render partial: 'message', collection: @messages
-      
-message new
-= form_with(model:@message, local: true) do |form|
-  = form.text_field  :message
-  = hidden_field_tag :match_id, params[:match_id]
-  = form.submit "Send"
+= render "share/title_bar"
+.wrapper
+  = render "share/side_bar"
+  .main
+    .content
+      = render partial: 'message', collection: @messages
+    = form_with(model:@message, local: true, class: "message-form") do |form|
+      = form.text_field  :message, class: "message-form__input"
+      = hidden_field_tag :match_id, params[:match_id], class: "message-form__id"
+      = form.submit "Send", class: "message-form__button"

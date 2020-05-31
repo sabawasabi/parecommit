@@ -22,6 +22,6 @@
               .profile-message
                 = target.explanation
             .search-target
-              = link_to match_target_matchs_path(target_id: target) do
+              = link_to target_path(target.id) do
                 .search-target__button
                   Pare

@@ -22,7 +22,7 @@
               = match.target.user.icon
           .match-box_name
             = link_to messages_path(match_id: match) do
-              = match.target.user.nickname
+              = match.target.target
     - current_user.targets.each do |target|
       - target.matchs.each do |match|
         .match-list
@@ -32,4 +32,4 @@
                 = match.user.icon
             .match-box_name
               = link_to messages_path(match_id: match) do
-                = match.user.nickname
+                = match.target.target

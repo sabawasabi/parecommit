@@ -11,7 +11,5 @@ a {
 .wrapper {
   display: flex;
   background-color: #ffe600;
-  overflow: scroll;
-  height: 100vh;
-  padding-top: 50px;
+  height: calc(100vh - 50px);
 }

@@ -5,8 +5,7 @@
   display: flex;
   line-height: 50px;
   justify-content: center;
-  position: fixed;
-  border-bottom: solid white 1px;
+  border-bottom: solid 1px white;
   .bar-title {
     color: white;
     font-size: 30px;
@@ -54,6 +53,7 @@
   .side-main {
     background-color: black;
     height: calc(100vh - 250px);
+    overflow: scroll;
     width: 200px;
     border-top: solid white 1px;
     .match-list {

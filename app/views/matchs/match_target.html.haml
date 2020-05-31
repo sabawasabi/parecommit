@@ -16,7 +16,5 @@
             以下のユーザーとPareを組みますか？
           .match-target__box-content
             = @target.user.nickname
-      .match-decision
-        = link_to done_matchs_path(target_id: @target) do
-          .match-decision__button
-            Pare
+      .match-button
+        = link_to "Pare", done_matchs_path(target_id: @target)

@@ -1,6 +1,5 @@
 .main {
   width: calc(100vw - 200px);
-
   .match {
     width: 100%;
     padding: 20px;
@@ -31,6 +30,22 @@
         width: 100px;
         background-color: #ff6600;
         text-align: center;
+      }
+    }
+    &-result {
+      font-size: 20px;
+      padding: 20px;
+      &__box {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border: solid 1px black;
+        margin-top: 40px;
+        &-text {
+          color: black;
+          height: 200px;
+          line-height: 200px;
+        }
       }
     }
   }

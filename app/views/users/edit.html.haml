@@ -1,5 +1,5 @@
 = render "share/title_bar"
-.wrapper
+.wrapper-user
   .user
     .header
       .header-title
@@ -35,4 +35,7 @@
                 = f.text_field :icon, autofocus: true, autocomplete: "icon"
           .actions
             .actions-buttom
-              = f.submit "Edit"
+              .actions-buttom__edit
+                = f.submit "Edit"
+              .actions-buttom__back
+                = link_to "Back", '/'

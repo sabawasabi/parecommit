@@ -7,7 +7,7 @@
             = current_user.icon
         .char-box_name
           .char-box_name_title
-            = link_to "#{current_user.nickname}", "#", method: :get
+            = current_user.nickname
           .char-box_name_edit
             = link_to edit_user_path(current_user) do
               = icon('fas', 'cog', class: 'icon')
@@ -22,7 +22,7 @@
               = match.target.user.icon
           .match-box_name
             = link_to messages_path(match_id: match) do
-              = match.target.user.nickname
+              = match.target.target
     - current_user.targets.each do |target|
       - target.matchs.each do |match|
         .match-list
@@ -32,4 +32,4 @@
                 = match.user.icon
             .match-box_name
               = link_to messages_path(match_id: match) do
-                = match.user.nickname
+                = match.target.target

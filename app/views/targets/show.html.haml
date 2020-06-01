@@ -7,6 +7,12 @@
         .target-box
           .target-box__title
             .target-box__title-text
+              ユーザー名
+          .target-box__field
+            = @target.user.nickname
+        .target-box
+          .target-box__title
+            .target-box__title-text
               目標名
           .target-box__field
             = @target.target
@@ -22,8 +28,15 @@
               目標日
           .target-box__field
             = @target.limit
-        .target-button
-          .target-button__decision
-            = link_to "編集画面に進む", "#"
-          .target-button__back
-            = link_to "もどる", '/'
+        - if current_user.id == @target.user_id
+          .target-button
+            .target-button__decision
+              = link_to "Edit", "#"
+            .target-button__back
+              = link_to "Back", '/'
+        - else
+          .target-button
+            .target-button__decision
+              = link_to "Pare", done_matchs_path(target_id: @target)
+            .target-button__back
+              = link_to "Back", '/'

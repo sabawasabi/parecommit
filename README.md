@@ -19,17 +19,17 @@
 にもなると感じたことから本アプリの制作に取り掛かりました。
 
 ## DEMO
-TOP<br>
-<a href="https://gyazo.com/3a75f0203e5bb82beb1b08e1b009817c"><img src="https://i.gyazo.com/3a75f0203e5bb82beb1b08e1b009817c.jpg" alt="Image from Gyazo" width="1440"/></a>
+TOP
+[![Image from Gyazo](https://i.gyazo.com/3a75f0203e5bb82beb1b08e1b009817c.jpg)](https://gyazo.com/3a75f0203e5bb82beb1b08e1b009817c)
 目標設定
-https://gyazo.com/a224515ee7b6329ae9afcbb39b3c59fe
+[![Image from Gyazo](https://i.gyazo.com/a224515ee7b6329ae9afcbb39b3c59fe.png)](https://gyazo.com/a224515ee7b6329ae9afcbb39b3c59fe)
 目標リスト(自分の目標管理)
-https://gyazo.com/a224515ee7b6329ae9afcbb39b3c59fe
+[![Image from Gyazo](https://i.gyazo.com/177654e91fda56b403069b73a3f7751d.png)](https://gyazo.com/177654e91fda56b403069b73a3f7751d)
 目標検索(別のユーザの目標を検索、Pare作成)
-https://gyazo.com/0a2735fe7909f82adb2e484fce6ea197
+[![Image from Gyazo](https://i.gyazo.com/0a2735fe7909f82adb2e484fce6ea197.gif)](https://gyazo.com/0a2735fe7909f82adb2e484fce6ea197)
 メッセージ画面
-https://gyazo.com/cbcd85aef7a4309532589aa29616a679
-https://gyazo.com/b488866474f033ce1e37738d9e292e3e
+[![Image from Gyazo](https://i.gyazo.com/cbcd85aef7a4309532589aa29616a679.gif)](https://gyazo.com/cbcd85aef7a4309532589aa29616a679)
+[![Image from Gyazo](https://i.gyazo.com/b488866474f033ce1e37738d9e292e3e.png)](https://gyazo.com/b488866474f033ce1e37738d9e292e3e)
 
 ## 工夫したポイント
 どの手順でマッチングしていくか、フローの流れを工夫した。<br>

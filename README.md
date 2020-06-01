@@ -20,7 +20,7 @@
 
 ## DEMO
 TOP<br>
-<img src="https://gyazo.com/3a75f0203e5bb82beb1b08e1b009817c" width=70%><br>
+["]https://gyazo.com/3a75f0203e5bb82beb1b08e1b009817c"]<br>
 目標設定
 https://gyazo.com/a224515ee7b6329ae9afcbb39b3c59fe
 目標リスト(自分の目標管理)

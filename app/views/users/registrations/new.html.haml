@@ -49,7 +49,8 @@
                 = f.password_field :password_confirmation, autocomplete: "new-password"
           .actions
             .actions-buttom
-              = f.submit "Sign Up"
+              .actions-buttom__decision
+                = f.submit "Sign Up"
     .footer
       .footer-link
         = render "users/shared/links"

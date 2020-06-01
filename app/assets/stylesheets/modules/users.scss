@@ -3,7 +3,7 @@
   justify-content: center;
   background-color: #ffe600;
   overflow: scroll;
-  height: 100vh;
+  height: calc(100vh - 50px);
   padding: 20px;
   .user {
     .header {
@@ -44,11 +44,28 @@
           display: flex;
           justify-content: center;
           &-buttom {
-            input {
-              background-color: black;
-              color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__edit {
+              input {
+                background-color: black;
+                color: white;
+                height: 50px;
+                width: 150px;
+              }
+            }
+            &__back {
+              margin-left: 10px;
               height: 50px;
               width: 150px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #ff6600;
+              a {
+                color: white;
+              }
             }
           }
         }

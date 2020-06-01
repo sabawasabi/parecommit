@@ -3,6 +3,12 @@
   = render "share/side_bar"
   .main
     .content
+      .message-header
+        .message-header__box
+          .message-header__box-title
+            目標名 : 
+          .message-header__box-content
+            = @match.target.target
       = render partial: 'message', collection: @messages
     = form_with(model:@message, local: true, class: "message-form") do |form|
       = form.text_field  :message, class: "message-form__input"

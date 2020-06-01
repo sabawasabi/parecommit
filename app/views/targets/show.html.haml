@@ -31,12 +31,12 @@
         - if current_user.id == @target.user_id
           .target-button
             .target-button__decision
-              = link_to "編集画面に進む", "#"
+              = link_to "Edit", "#"
             .target-button__back
-              = link_to "もどる", '/'
+              = link_to "Back", '/'
         - else
           .target-button
             .target-button__decision
               = link_to "Pare", done_matchs_path(target_id: @target)
             .target-button__back
-              = link_to "もどる", '/'
+              = link_to "Back", '/'

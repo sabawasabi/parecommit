@@ -5,6 +5,17 @@
     width: 100%;
     padding: 20px;
     background-color: #f8f8f8;
+    .message-header {
+      &__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &-title {
+          margin-right: 5px;
+        }
+        &-content {}
+      }
+    }
     .message {
       margin-bottom: 10px;
       border: solid 1px black;

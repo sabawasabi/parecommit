@@ -8,9 +8,7 @@
       .search-list
         - @targets.each do |target|
           .search-list_box
-            .search-list_box_icon
-              .target-list_box_icon-image
-                = target.user.icon
+            = image_tag "#{target.user.icon}", class:"search-list_box_icon"
             .profile
               .profile-name
                 = target.user.nickname

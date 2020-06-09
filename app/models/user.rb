@@ -13,4 +13,6 @@ class User < ApplicationRecord
   has_many :targets
   has_many :matchs
   has_many :messages
+
+  mount_uploader :icon, ImageUploader
 end

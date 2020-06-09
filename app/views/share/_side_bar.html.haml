@@ -3,8 +3,7 @@
     .char
       .char-box
         .char-box_icon
-          .char-box_icon-image
-            = current_user.icon
+          = image_tag "#{current_user.icon}", class:"char-box_icon-image"
         .char-box_name
           .char-box_name_title
             = current_user.nickname
@@ -18,8 +17,7 @@
       .match-list
         .match-box
           .match-box_icon
-            .match-box_icon-image
-              = match.target.user.icon
+            = image_tag "#{match.target.user.icon}", class:"match-box_icon-image"
           .match-box_name
             = link_to messages_path(match_id: match) do
               = match.target.target
@@ -28,8 +26,7 @@
         .match-list
           .match-box
             .match-box_icon
-              .match-box_icon-image
-                = match.user.icon
+              = image_tag "#{match.user.icon}", class:"match-box_icon-image"
             .match-box_name
               = link_to messages_path(match_id: match) do
                 = match.target.target

@@ -33,4 +33,6 @@ public/uploads/*
 yarn-debug.log*
 .yarn-integrity
 
+config/secrets.yml
+
 .DS_Store

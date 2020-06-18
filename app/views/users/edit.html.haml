@@ -1,5 +1,5 @@
 = render "share/title_bar"
-.wrapper-user
+.wrapper
   .user
     .header
       .header-title
@@ -8,6 +8,8 @@
       .main-box
         = form_for(current_user) do |f|
           .field
+            .main-box_icon
+              = f.file_field :icon, autofocus: true, autocomplete: "icon"
             .main-box_form
               .main-box_form-title
                 mail :
@@ -27,12 +29,7 @@
               .main-box_form-title
                 profile :
               .main-box_form-input
-                = f.text_field :profile, autofocus: true, autocomplete: "profile"
-            .main-box_form
-              .main-box_form-title
-                icon :
-              .main-box_form-input
-                = f.file_field :icon, autofocus: true, autocomplete: "icon"
+                = f.text_area :profile, placeholder: "自分について一言！", rows: "7"
           .actions
             .actions-buttom
               .actions-buttom__decision

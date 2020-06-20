@@ -5,6 +5,10 @@ class TargetsController < ApplicationController
     @targets = Target.where(user_id: current_user.id).limit(5).order('id DESC')
   end
 
+  def myindex
+    @targets = Target.where(user_id: current_user.id)
+  end
+
   def new
     @target = Target.new
   end

@@ -13,10 +13,15 @@
     .target-list
       .target-list__title
         目標リスト
-      - @targets.each do |target|
-        .target-list__box
-          .target-list__box-name
-            = link_to target_path(target.id) do
-              = target.target
-          .target-list__box-explanation
-            = target.explanation
+        .target-mylist__title
+          自分の目標(新着順)
+        - @targets.each do |target|
+          .target-mylist__box
+            .target-mylist__box-name
+              = link_to target_path(target.id) do
+                = target.target
+            .target-mylist__box-explanation
+              = target.explanation
+        .target-mylist__plus
+          = link_to myindex_targets_path(current_user.id) do
+            more

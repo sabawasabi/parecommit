@@ -13,15 +13,25 @@
     .target-list
       .target-list__title
         目標リスト
-        .target-mylist__title
-          自分の目標(新着順)
-        - @targets.each do |target|
-          .target-mylist__box
-            .target-mylist__box-name
-              = link_to target_path(target.id) do
-                = target.target
-            .target-mylist__box-explanation
-              = target.explanation
-        .target-mylist__plus
-          = link_to myindex_targets_path(current_user.id) do
-            more
+        .target-mylist
+          .target-mylist__title
+            自分の目標(新着順)
+          - @mytargets.each do |target|
+            .target-mylist__box
+              .target-mylist__box-name
+                = link_to target_path(target.id) do
+                  = target.target
+          .target-mylist__plus
+            = link_to myindex_targets_path do
+              more
+        .target-all
+          .target-all__title
+            みんなの目標(新着順)
+          - @alltargets.each do |target|
+            .target-all__box
+              .target-all__box-name
+                = link_to target_path(target.id) do
+                  = target.target
+          .target-mylist__plus
+            = link_to allindex_targets_path do
+              more

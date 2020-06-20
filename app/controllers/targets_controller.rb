@@ -2,11 +2,16 @@ class TargetsController < ApplicationController
   before_action :set_target, only: [:show, :edit, :update]
 
   def index
-    @targets = Target.where(user_id: current_user.id).limit(5).order('id DESC')
+    @mytargets = Target.where(user_id: current_user.id).limit(5).order('id DESC')
+    @alltargets = Target.all.limit(5).order('id DESC').where.not(user_id: current_user.id)
   end
 
   def myindex
     @targets = Target.where(user_id: current_user.id)
+  end
+
+  def allindex
+    @targets = Target.all.where.not(user_id: current_user.id)
   end
 
   def new

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'myindex'
+      get 'allindex'
     end
   end
   resources :matchs do

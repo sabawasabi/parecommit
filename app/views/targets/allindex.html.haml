@@ -1,0 +1,24 @@
+= render "share/title_bar"
+.wrapper
+  = render "share/side_bar"
+  .main
+    .target
+      .target-name
+        = "#{current_user.nickname}"
+      .targets-list
+        - @targets.each do |target|
+          .target-list_box
+            = image_tag "#{target.user.icon}", class:"search-list_box_icon"
+            .profile
+              .profile-name
+                = target.user.nickname
+              .profile-detele
+                .profile-detele_limit
+                  = target.limit
+                .profile-detele_gender
+                  = target.user.gender
+              .profile-message
+                = target.explanation
+            .target-target
+              = link_to target_path(target.id) do
+                = target.target

@@ -9,7 +9,7 @@
         - @targets.each do |target|
           - if target.status == "No Pare"
             .search-list_box
-              = image_tag "#{target.user.icon}", class:"search-list_box_icon"
+              = image_tag "#{target.user.icon}", width:"150px", class:"search-list_box_icon"
               .profile
                 .profile-name
                   = target.user.nickname

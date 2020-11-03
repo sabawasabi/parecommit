@@ -3,7 +3,7 @@
   = render "share/side_bar"
   .main
     .new
-      = form_for @target do |f|
+      = form_with model: @target, local: true do |form|
         .target-box
           .target-box__title
             .target-box__title-text
@@ -11,7 +11,7 @@
             .target-box__title-required
               必須
           .target-box__field
-            = f.text_field :target, placeholder: "40文字まで"
+            = form.text_field :target, placeholder: "40文字まで"
         .target-box
           .target-box__title
             .target-box__title-text
@@ -19,7 +19,7 @@
             .target-box__title-required
               必須
           .target-box__area
-            = f.text_area :explanation, placeholder: "目標の説明（必須 1,000文字以内）\n（目標に対しての意気込みや自分の中の達成したい内容の詳細など）", rows: "7"
+            = form.text_area :explanation, placeholder: "目標の説明（必須 1,000文字以内）\n（目標に対しての意気込みや自分の中の達成したい内容の詳細など）", rows: "7"
         .target-box
           .target-box__title
             .target-box__title-text
@@ -27,9 +27,9 @@
             .target-box__title-required
               必須
           .target-box__field
-            = f.text_field :limit
+            = form.date_field :limit
         .target-button
           .target-button__decision
-            = f.submit "Create"
+            = form.submit "Create"
           .target-button__back
             =link_to "Back", '/'

@@ -7,19 +7,20 @@
         = "#{params[:keyword]}"
       .search-list
         - @targets.each do |target|
-          .search-list_box
-            = image_tag "#{target.user.icon}", class:"search-list_box_icon"
-            .profile
-              .profile-name
-                = target.user.nickname
-              .profile-detele
-                .profile-detele_limit
-                  = target.limit
-                .profile-detele_gender
-                  = target.user.gender
-              .profile-message
-                = target.explanation
-            .search-target
-              = link_to target_path(target.id) do
-                .search-target__button
-                  Pare
+          - if target.status == "No Pare"
+            .search-list_box
+              = image_tag "#{target.user.icon}", width:"150px", class:"search-list_box_icon"
+              .profile
+                .profile-name
+                  = target.user.nickname
+                .profile-detele
+                  .profile-detele_limit
+                    = target.limit
+                  .profile-detele_gender
+                    = target.user.gender
+                .profile-message
+                  = target.explanation
+              .search-target
+                = link_to target_path(target.id) do
+                  .search-target__button
+                    Pare

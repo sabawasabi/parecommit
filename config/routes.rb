@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :targets, only: [:index, :new, :create, :show] do
     collection do
       get 'search'
+      get 'myindex'
+      get 'allindex'
     end
   end
   resources :matchs do

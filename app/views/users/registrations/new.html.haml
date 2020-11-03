@@ -1,56 +1,52 @@
 = render "share/title_bar"
-.wrapper-user
+.wrapper
   .user
     .header
       .header-title
-        Sign Up
+        新規登録
     .main
       .main-box
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           = render "devise/shared/error_messages", resource: resource
           .field
+            .main-box_icon
+              = f.file_field :icon, autofocus: true, autocomplete: "icon"
             .main-box_form
               .main-box_form-title
-                mail :
+                メールアドレス :
               .main-box_form-input
                 = f.email_field :email, autofocus: true, autocomplete: "email"
             .main-box_form
               .main-box_form-title
-                nickname :
+                ニックネーム :
               .main-box_form-input
                 = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
             .main-box_form
               .main-box_form-title
-                gender :
+                性別 :
               .main-box_form-input
-                = f.text_field :gender, autofocus: true, autocomplete: "gender"
+                = f.select :gender, [["男性", "男性"], ["女性", "女性"], ["その他", "その他"]], include_blank: "選択して下さい"
             .main-box_form
               .main-box_form-title
-                profile :
+                自己紹介 :
               .main-box_form-input
-                = f.text_field :profile, autofocus: true, autocomplete: "profile"
+                = f.text_area :profile, placeholder: "自分について一言！", rows: "7"
             .main-box_form
               .main-box_form-title
-                icon :
-              .main-box_form-input
-                = f.file_field :icon, autofocus: true, autocomplete: "icon"
-            .main-box_form
-              .main-box_form-title
-                password 
+                パスワード 
                 - if @minimum_password_length
-                  %em
-                    (#{@minimum_password_length} characters minimum) :
+                  (#{@minimum_password_length} 文字以上で設定してください) :
               .main-box_form-input
                 = f.password_field :password, autocomplete: "new-password"
             .main-box_form
               .main-box_form-title
-                password (one more) :
+                パスワード (再確認) :
               .main-box_form-input
                 = f.password_field :password_confirmation, autocomplete: "new-password"
           .actions
             .actions-buttom
               .actions-buttom__decision
-                = f.submit "Sign Up"
+                = f.submit "登録"
     .footer
       .footer-link
         = render "users/shared/links"
